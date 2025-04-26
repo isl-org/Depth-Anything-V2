@@ -1,0 +1,57 @@
+#
+# Copyright(c) 2025 Intel. Licensed under the MIT License <http://opensource.org/licenses/MIT>.
+#
+
+[build-system]
+requires = ["setuptools>=42", "wheel", "Cython", "numpy",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metric_depth_anything_v2"
+description = "Depth prediction model."
+dependencies = [
+    "black >= 24.4",
+]
+
+maintainers = [
+]
+
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["machine learning", "video generation"]
+classifiers = [
+    # How mature is this project? Common values are
+    #   3 - Alpha
+    #   4 - Beta
+    #   5 - Production/Stable
+    "Development Status :: 3 - Alpha",
+
+    # Indicate who your project is intended for
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+
+    # License
+    "License :: OSI Approved :: MIT License",
+
+    # Specify the Python versions you support here.
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">= 3.10"
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://www.intel.com"
+Documentation = "https://readthedocs.org"
+Repository = "https://github.com/isl-org/Depth-Anything-V2/metric_depth"
+
+[tool.setuptools]
+py-modules = ["metric_depth_anything_v2"]
+
+[tool.black]
+include = 'metric_depth_anything_v2/.*py$|tests/.*\.py$|scripts/.*\.py$'
+force-exclude = '''
+submodules/.*
+'''
